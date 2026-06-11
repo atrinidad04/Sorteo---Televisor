@@ -19,42 +19,6 @@ export interface Participant {
 export const PARTICIPANTS: Participant[] = [
   {
     id: 1,
-    name: 'Albert',
-    teams: [
-      { name: 'Portugal', nameEn: 'Portugal', flag: '🇵🇹', countryCode: 'PT' },
-      { name: 'Cuba', nameEn: 'Cuba', flag: '🇨🇺', countryCode: 'CU' },
-      { name: 'RD Congo', nameEn: 'DR Congo', flag: '🇨🇩', countryCode: 'CD' },
-    ],
-  },
-  {
-    id: 2,
-    name: 'Alexander',
-    teams: [
-      { name: 'Senegal', nameEn: 'Senegal', flag: '🇸🇳', countryCode: 'SN' },
-      { name: 'Australia', nameEn: 'Australia', flag: '🇦🇺', countryCode: 'AU' },
-      { name: 'Austria', nameEn: 'Austria', flag: '🇦🇹', countryCode: 'AT' },
-    ],
-  },
-  {
-    id: 3,
-    name: 'Betzaler',
-    teams: [
-      { name: 'Canadá', nameEn: 'Canada', flag: '🇨🇦', countryCode: 'CA' },
-      { name: 'España', nameEn: 'Spain', flag: '🇪🇸', countryCode: 'ES' },
-      { name: 'Inglaterra', nameEn: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', countryCode: 'GB-ENG' },
-    ],
-  },
-  {
-    id: 4,
-    name: 'César',
-    teams: [
-      { name: 'Marruecos', nameEn: 'Morocco', flag: '🇲🇦', countryCode: 'MA' },
-      { name: 'Cabo Verde', nameEn: 'Cape Verde', flag: '🇨🇻', countryCode: 'CV' },
-      { name: 'Bélgica', nameEn: 'Belgium', flag: '🇧🇪', countryCode: 'BE' },
-    ],
-  },
-  {
-    id: 5,
     name: 'Chantal R',
     teams: [
       { name: 'Uruguay', nameEn: 'Uruguay', flag: '🇺🇾', countryCode: 'UY' },
@@ -63,52 +27,7 @@ export const PARTICIPANTS: Participant[] = [
     ],
   },
   {
-    id: 6,
-    name: 'Daniel',
-    teams: [
-      { name: 'México', nameEn: 'Mexico', flag: '🇲🇽', countryCode: 'MX' },
-      { name: 'Tokio', nameEn: 'Togo', flag: '🇹🇬', countryCode: 'TG' },
-      { name: 'Egipto', nameEn: 'Egypt', flag: '🇪🇬', countryCode: 'EG' },
-    ],
-  },
-  {
-    id: 7,
-    name: 'Félix',
-    teams: [
-      { name: 'Uzbekistán', nameEn: 'Uzbekistan', flag: '🇺🇿', countryCode: 'UZ' },
-      { name: 'Brasil', nameEn: 'Brazil', flag: '🇧🇷', countryCode: 'BR' },
-      { name: 'Sudáfrica', nameEn: 'South Africa', flag: '🇿🇦', countryCode: 'ZA' },
-    ],
-  },
-  {
-    id: 8,
-    name: 'Gabriel',
-    teams: [
-      { name: 'Rumania', nameEn: 'Romania', flag: '🇷🇴', countryCode: 'RO' },
-      { name: 'Ecuador', nameEn: 'Ecuador', flag: '🇪🇨', countryCode: 'EC' },
-      { name: 'Croacia', nameEn: 'Croatia', flag: '🇭🇷', countryCode: 'HR' },
-    ],
-  },
-  {
-    id: 9,
-    name: 'Humberto',
-    teams: [
-      { name: 'Francia', nameEn: 'France', flag: '🇫🇷', countryCode: 'FR' },
-      { name: 'Arabia Saudí', nameEn: 'Saudi Arabia', flag: '🇸🇦', countryCode: 'SA' },
-      { name: 'Ghana', nameEn: 'Ghana', flag: '🇬🇭', countryCode: 'GH' },
-    ],
-  },
-  {
-    id: 10,
-    name: 'Isabel',
-    teams: [
-      { name: 'Túnez', nameEn: 'Tunisia', flag: '🇹🇳', countryCode: 'TN' },
-      { name: 'Noruega', nameEn: 'Norway', flag: '🇳🇴', countryCode: 'NO' },
-      { name: 'Irak', nameEn: 'Iraq', flag: '🇮🇶', countryCode: 'IQ' },
-    ],
-  },
-  {
-    id: 11,
+    id: 2,
     name: 'Joel',
     teams: [
       { name: 'Nueva Zelanda', nameEn: 'New Zealand', flag: '🇳🇿', countryCode: 'NZ' },
@@ -117,25 +36,34 @@ export const PARTICIPANTS: Participant[] = [
     ],
   },
   {
-    id: 12,
-    name: 'Luis',
+    id: 3,
+    name: 'Félix',
     teams: [
-      { name: 'Alemania', nameEn: 'Germany', flag: '🇩🇪', countryCode: 'DE' },
-      { name: 'Suiza', nameEn: 'Switzerland', flag: '🇨🇭', countryCode: 'CH' },
-      { name: 'Rep. Checa', nameEn: 'Czech Republic', flag: '🇨🇿', countryCode: 'CZ' },
+      { name: 'Uzbekistán', nameEn: 'Uzbekistan', flag: '🇺🇿', countryCode: 'UZ' },
+      { name: 'Brasil', nameEn: 'Brazil', flag: '🇧🇷', countryCode: 'BR' },
+      { name: 'Sudáfrica', nameEn: 'South Africa', flag: '🇿🇦', countryCode: 'ZA' },
     ],
   },
   {
-    id: 13,
-    name: 'Mabel',
+    id: 4,
+    name: 'Alexander',
     teams: [
-      { name: 'España', nameEn: 'Spain', flag: '🇪🇸', countryCode: 'ES' },
-      { name: 'Bélgica', nameEn: 'Belgium', flag: '🇧🇪', countryCode: 'BE' },
-      { name: 'Paraguay', nameEn: 'Paraguay', flag: '🇵🇾', countryCode: 'PY' },
+      { name: 'Senegal', nameEn: 'Senegal', flag: '🇸🇳', countryCode: 'SN' },
+      { name: 'Australia', nameEn: 'Australia', flag: '🇦🇺', countryCode: 'AU' },
+      { name: 'Austria', nameEn: 'Austria', flag: '🇦🇹', countryCode: 'AT' },
     ],
   },
   {
-    id: 14,
+    id: 5,
+    name: 'Daniel',
+    teams: [
+      { name: 'México', nameEn: 'Mexico', flag: '🇲🇽', countryCode: 'MX' },
+      { name: 'Suecia', nameEn: 'Sweden', flag: '🇸🇪', countryCode: 'SE' },
+      { name: 'Egipto', nameEn: 'Egypt', flag: '🇪🇬', countryCode: 'EG' },
+    ],
+  },
+  {
+    id: 6,
     name: 'Pedro',
     teams: [
       { name: 'Estados Unidos', nameEn: 'United States', flag: '🇺🇸', countryCode: 'US' },
@@ -144,21 +72,93 @@ export const PARTICIPANTS: Participant[] = [
     ],
   },
   {
-    id: 15,
+    id: 7,
+    name: 'Luis',
+    teams: [
+      { name: 'Alemania', nameEn: 'Germany', flag: '🇩🇪', countryCode: 'DE' },
+      { name: 'Suiza', nameEn: 'Switzerland', flag: '🇨🇭', countryCode: 'CH' },
+      { name: 'República Checa', nameEn: 'Czech Republic', flag: '🇨🇿', countryCode: 'CZ' },
+    ],
+  },
+  {
+    id: 8,
+    name: 'César',
+    teams: [
+      { name: 'Marruecos', nameEn: 'Morocco', flag: '🇲🇦', countryCode: 'MA' },
+      { name: 'Cabo Verde', nameEn: 'Cape Verde', flag: '🇨🇻', countryCode: 'CV' },
+      { name: 'Irak', nameEn: 'Iraq', flag: '🇮🇶', countryCode: 'IQ' },
+    ],
+  },
+  {
+    id: 9,
+    name: 'Mabel',
+    teams: [
+      { name: 'Argelia', nameEn: 'Algeria', flag: '🇩🇿', countryCode: 'DZ' },
+      { name: 'Bélgica', nameEn: 'Belgium', flag: '🇧🇪', countryCode: 'BE' },
+      { name: 'Paraguay', nameEn: 'Paraguay', flag: '🇵🇾', countryCode: 'PY' },
+    ],
+  },
+  {
+    id: 10,
+    name: 'Humberto',
+    teams: [
+      { name: 'Francia', nameEn: 'France', flag: '🇫🇷', countryCode: 'FR' },
+      { name: 'Arabia Saudita', nameEn: 'Saudi Arabia', flag: '🇸🇦', countryCode: 'SA' },
+      { name: 'Ghana', nameEn: 'Ghana', flag: '🇬🇭', countryCode: 'GH' },
+    ],
+  },
+  {
+    id: 11,
+    name: 'Gabriel',
+    teams: [
+      { name: 'Escocia', nameEn: 'Scotland', flag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', countryCode: 'GB-SCT' },
+      { name: 'Ecuador', nameEn: 'Ecuador', flag: '🇪🇨', countryCode: 'EC' },
+      { name: 'Croacia', nameEn: 'Croatia', flag: '🇭🇷', countryCode: 'HR' },
+    ],
+  },
+  {
+    id: 12,
+    name: 'Sugeiry',
+    teams: [
+      { name: 'Turquía', nameEn: 'Turkey', flag: '🇹🇷', countryCode: 'TR' },
+      { name: 'Costa de Marfil', nameEn: 'Ivory Coast', flag: '🇨🇮', countryCode: 'CI' },
+      { name: 'Bosnia y Herzegovina', nameEn: 'Bosnia and Herzegovina', flag: '🇧🇦', countryCode: 'BA' },
+    ],
+  },
+  {
+    id: 13,
     name: 'Ricardo',
     teams: [
       { name: 'Jordania', nameEn: 'Jordan', flag: '🇯🇴', countryCode: 'JO' },
-      { name: 'Eslovenia', nameEn: 'Slovenia', flag: '🇸🇮', countryCode: 'SI' },
+      { name: 'España', nameEn: 'Spain', flag: '🇪🇸', countryCode: 'ES' },
       { name: 'Irán', nameEn: 'Iran', flag: '🇮🇷', countryCode: 'IR' },
     ],
   },
   {
-    id: 16,
-    name: 'Sugeiry',
+    id: 14,
+    name: 'Betzaler',
     teams: [
-      { name: 'Turquía', nameEn: 'Turkey', flag: '🇹🇷', countryCode: 'TR' },
-      { name: 'Costa de Marfil', nameEn: "Ivory Coast", flag: '🇨🇮', countryCode: 'CI' },
-      { name: 'Bosnia', nameEn: 'Bosnia and Herzegovina', flag: '🇧🇦', countryCode: 'BA' },
+      { name: 'Canadá', nameEn: 'Canada', flag: '🇨🇦', countryCode: 'CA' },
+      { name: 'Japón', nameEn: 'Japan', flag: '🇯🇵', countryCode: 'JP' },
+      { name: 'Inglaterra', nameEn: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', countryCode: 'GB-ENG' },
+    ],
+  },
+  {
+    id: 15,
+    name: 'Albert',
+    teams: [
+      { name: 'Portugal', nameEn: 'Portugal', flag: '🇵🇹', countryCode: 'PT' },
+      { name: 'Catar', nameEn: 'Qatar', flag: '🇶🇦', countryCode: 'QA' },
+      { name: 'República del Congo', nameEn: 'Republic of the Congo', flag: '🇨🇬', countryCode: 'CG' },
+    ],
+  },
+  {
+    id: 16,
+    name: 'Isabel',
+    teams: [
+      { name: 'Túnez', nameEn: 'Tunisia', flag: '🇹🇳', countryCode: 'TN' },
+      { name: 'Noruega', nameEn: 'Norway', flag: '🇳🇴', countryCode: 'NO' },
+      { name: 'Haití', nameEn: 'Haiti', flag: '🇭🇹', countryCode: 'HT' },
     ],
   },
 ];
