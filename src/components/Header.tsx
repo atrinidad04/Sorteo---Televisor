@@ -21,7 +21,7 @@ export const Header: React.FC<HeaderProps> = ({ lastUpdated, isLoading, onRefres
         <div className="header-brand">
           <span className="header-trophy">⚽</span>
           <div className="header-title-block">
-            <h1 className="header-title">Mundial 2026</h1>
+            <h1 className="header-title">Mundial INFORUM 2026</h1>
             <p className="header-subtitle">Seguimiento del sorteo</p>
           </div>
         </div>
