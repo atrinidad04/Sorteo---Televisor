@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useWorldCupData } from './hooks/useWorldCupData';
 import { Header } from './components/Header';
 import { Tabs, type TabId } from './components/Tabs';
