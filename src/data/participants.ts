@@ -149,7 +149,7 @@ export const PARTICIPANTS: Participant[] = [
     teams: [
       { name: 'Portugal', nameEn: 'Portugal', flag: '🇵🇹', countryCode: 'PT' },
       { name: 'Catar', nameEn: 'Qatar', flag: '🇶🇦', countryCode: 'QA' },
-      { name: 'República del Congo', nameEn: 'Republic of the Congo', flag: '🇨🇬', countryCode: 'CG' },
+      { name: 'República del Congo', nameEn: 'DR Congo', flag: '🇨🇬', countryCode: 'CG' },
     ],
   },
   {
