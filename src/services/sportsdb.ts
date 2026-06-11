@@ -121,22 +121,40 @@ export async function fetchWorldCupEvents(forceRefresh = false): Promise<FetchRe
   }
 
   try {
-    const url = `${BASE_URL}/eventsseason.php?id=${WORLD_CUP_LEAGUE_ID}&s=${WORLD_CUP_SEASON}`;
-    const res = await rateLimitedFetch(url);
-    
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
+    let allEvents: SportEvent[] = [];
+    let round = 1;
+    let hasMoreRounds = true;
+
+    while (hasMoreRounds) {
+      const url = `${BASE_URL}/eventsround.php?id=${WORLD_CUP_LEAGUE_ID}&r=${round}&s=${WORLD_CUP_SEASON}`;
+      const res = await rateLimitedFetch(url);
+      
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+      
+      const json = await res.json();
+      const roundEvents = json.events;
+      
+      if (!roundEvents || roundEvents.length === 0) {
+        hasMoreRounds = false;
+      } else {
+        const parsedEvents: SportEvent[] = roundEvents.map((e: Record<string, string>) => ({
+          ...e,
+          status: computeStatus(e.strStatus),
+        }));
+        allEvents = allEvents.concat(parsedEvents);
+        round++;
+      }
     }
     
-    const json = await res.json();
-    const events: SportEvent[] = (json.events || []).map((e: Record<string, string>) => ({
-      ...e,
-      status: computeStatus(e.strStatus),
-    }));
+    if (allEvents.length === 0) {
+      throw new Error('No se encontraron partidos para la temporada.');
+    }
     
-    cacheSet(cacheKey, events);
+    cacheSet(cacheKey, allEvents);
     const ts = Date.now();
-    return { data: events, error: null, fromCache: false, updatedAt: ts };
+    return { data: allEvents, error: null, fromCache: false, updatedAt: ts };
   } catch (err) {
     const msg = err instanceof Error ? err.message : 'Unknown error';
     // Try to return stale cache on error

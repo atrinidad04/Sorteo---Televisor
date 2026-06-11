@@ -41,8 +41,12 @@ const STATUS_LABELS: Record<string, string> = {
   finished: 'Terminado',
 };
 
-function formatDate(dateStr: string): string {
+function formatDate(dateStr: string, timeStr?: string): string {
   try {
+    if (timeStr && timeStr !== '00:00:00') {
+      const dt = new Date(`${dateStr}T${timeStr}Z`);
+      return dt.toLocaleDateString('es-DO', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'America/Santo_Domingo' });
+    }
     const d = new Date(dateStr + 'T00:00:00');
     return d.toLocaleDateString('es-DO', { weekday: 'short', day: 'numeric', month: 'short' });
   } catch {
@@ -67,7 +71,7 @@ export const MatchCard: React.FC<MatchCardProps> = ({ event }) => {
   const awayOwners = useMemo(() => getOwnerNames(event.strAwayTeam), [event.strAwayTeam]);
   const allOwners = useMemo(() => [...new Set([...homeOwners, ...awayOwners])], [homeOwners, awayOwners]);
 
-  const formattedDate = formatDate(event.dateEvent);
+  const formattedDate = formatDate(event.dateEvent, event.strTime);
   const formattedTime = formatTime(event.strTime, event.dateEvent);
   const hasScore = event.intHomeScore !== null && event.intAwayScore !== null;
 
