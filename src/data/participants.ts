@@ -23,7 +23,7 @@ export const PARTICIPANTS: Participant[] = [
     teams: [
       { name: 'Uruguay', nameEn: 'Uruguay', flag: '🇺🇾', countryCode: 'UY' },
       { name: 'Argentina', nameEn: 'Argentina', flag: '🇦🇷', countryCode: 'AR' },
-      { name: 'Curazao', nameEn: 'Curacao', flag: '🇨🇼', countryCode: 'CW' },
+      { name: 'Curazao', nameEn: 'Curaçao', flag: '🇨🇼', countryCode: 'CW' },
     ],
   },
   {
@@ -66,7 +66,7 @@ export const PARTICIPANTS: Participant[] = [
     id: 6,
     name: 'Pedro',
     teams: [
-      { name: 'Estados Unidos', nameEn: 'United States', flag: '🇺🇸', countryCode: 'US' },
+      { name: 'Estados Unidos', nameEn: 'USA', flag: '🇺🇸', countryCode: 'US' },
       { name: 'Países Bajos', nameEn: 'Netherlands', flag: '🇳🇱', countryCode: 'NL' },
       { name: 'Panamá', nameEn: 'Panama', flag: '🇵🇦', countryCode: 'PA' },
     ],
@@ -122,7 +122,7 @@ export const PARTICIPANTS: Participant[] = [
     teams: [
       { name: 'Turquía', nameEn: 'Turkey', flag: '🇹🇷', countryCode: 'TR' },
       { name: 'Costa de Marfil', nameEn: 'Ivory Coast', flag: '🇨🇮', countryCode: 'CI' },
-      { name: 'Bosnia y Herzegovina', nameEn: 'Bosnia and Herzegovina', flag: '🇧🇦', countryCode: 'BA' },
+      { name: 'Bosnia y Herzegovina', nameEn: 'Bosnia-Herzegovina', flag: '🇧🇦', countryCode: 'BA' },
     ],
   },
   {
