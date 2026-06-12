@@ -14,6 +14,7 @@ export interface ParticipantScore {
   participant: Participant;
   goals: number;
   wins: number;
+  draws: number;
   points: number;
   rank: number;
   liveGoals: number; // goals from currently live matches (informational)
@@ -61,7 +62,7 @@ export function computeScores(events: SportEvent[]): ParticipantScore[] {
   // Initialize scores
   const scores = new Map<number, ParticipantScore>();
   for (const p of PARTICIPANTS) {
-    scores.set(p.id, { participant: p, goals: 0, wins: 0, points: 0, rank: 0, liveGoals: 0 });
+    scores.set(p.id, { participant: p, goals: 0, wins: 0, draws: 0, points: 0, rank: 0, liveGoals: 0 });
   }
 
   for (const ev of events) {
@@ -94,7 +95,7 @@ export function computeScores(events: SportEvent[]): ParticipantScore[] {
       }
     }
 
-    // Accumulate wins (only confirmed / finished)
+    // Accumulate wins and draws (only confirmed / finished)
     if (countWins) {
       if (homeGoals > awayGoals) {
         for (const ownerId of homeOwners) {
@@ -106,6 +107,16 @@ export function computeScores(events: SportEvent[]): ParticipantScore[] {
           const s = scores.get(ownerId);
           if (s) s.wins += 1;
         }
+      } else {
+        // Draw
+        for (const ownerId of homeOwners) {
+          const s = scores.get(ownerId);
+          if (s) s.draws += 1;
+        }
+        for (const ownerId of awayOwners) {
+          const s = scores.get(ownerId);
+          if (s) s.draws += 1;
+        }
       }
     }
   }
@@ -113,7 +124,7 @@ export function computeScores(events: SportEvent[]): ParticipantScore[] {
   // Compute points
   const arr = Array.from(scores.values()).map(s => ({
     ...s,
-    points: s.goals * 2 + s.wins * 3,
+    points: s.goals * 2 + s.wins * 3 + s.draws * 1,
   }));
 
   // Sort by points, then wins, then goals

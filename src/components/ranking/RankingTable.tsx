@@ -24,6 +24,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ scores }) => {
             <th>Selecciones</th>
             <th className="stat-cell" aria-label="Goles">GOLES</th>
             <th className="stat-cell" aria-label="Victorias">VCT.</th>
+            <th className="stat-cell" aria-label="Empates">EMP.</th>
             <th className="stat-cell" aria-label="Puntos">PTS</th>
           </tr>
         </thead>
@@ -52,6 +53,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ scores }) => {
               </td>
               <td className="stat-cell stat-goals">{s.goals}</td>
               <td className="stat-cell stat-wins">{s.wins}</td>
+              <td className="stat-cell stat-draws">{s.draws}</td>
               <td className="stat-cell stat-pts">{s.points}</td>
             </tr>
           ))}

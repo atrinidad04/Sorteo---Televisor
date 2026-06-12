@@ -438,6 +438,7 @@ body {
 
 .stat-goals { color: var(--offwhite-dim); }
 .stat-wins { color: var(--offwhite-dim); }
+.stat-draws { color: var(--offwhite-dim); }
 .stat-pts {
   font-family: var(--font-title);
   font-size: 1.3rem;
@@ -787,7 +788,7 @@ body {
 
 @media (max-width: 480px) {
   .podium-pts { font-size: 1.2rem; }
-  .stat-goals, .stat-wins { display: none; }
+  .stat-goals, .stat-wins, .stat-draws { display: none; }
 }
 
 /* ============================================================
