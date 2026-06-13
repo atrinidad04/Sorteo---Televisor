@@ -21,39 +21,11 @@ export interface ParticipantScore {
 }
 
 function normalizeTeamName(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/\bdr\b/g, 'democratic republic')
-    .replace(/\brepublic\b/g, 'republic')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return name.toLowerCase().trim();
 }
 
 function teamMatches(apiName: string, targetName: string): boolean {
-  const api = normalizeTeamName(apiName);
-  const target = normalizeTeamName(targetName);
-  if (api === target) return true;
-  if (api.includes(target) || target.includes(api)) return true;
-  const aliases: Record<string, string[]> = {
-    'united states': ['usa', 'us', 'united states of america'],
-    'south korea': ['korea republic', 'korea rep'],
-    'ivory coast': ["cote d'ivoire", 'cote divoire'],
-    'england': ['england', 'great britain'],
-    'dr congo': ['democratic republic of congo', 'democratic republic congo', 'rd congo'],
-    'cape verde': ['cabo verde'],
-    'czech republic': ['czechia'],
-    'bosnia and herzegovina': ['bosnia', 'bosnia & herzegovina'],
-    'turkey': ['turkiye'],
-    'curacao': ['curaçao'],
-    'new zealand': ['new zealand', 'all whites'],
-  };
-  for (const [key, vals] of Object.entries(aliases)) {
-    if ((api.includes(key) || vals.some(v => api.includes(v))) &&
-        (target.includes(key) || vals.some(v => target.includes(v)))) {
-      return true;
-    }
-  }
-  return false;
+  return normalizeTeamName(apiName) === normalizeTeamName(targetName);
 }
 
 export function computeScores(events: SportEvent[]): ParticipantScore[] {
